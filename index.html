@@ -1488,7 +1488,12 @@
           </div>
 
           <div class="form-card">
-            <form id="lead-form" novalidate>
+            <form
+              id="lead-form"
+              action="https://formsubmit.co/pure46q4@naver.com"
+              method="POST"
+              novalidate
+            >
               <div class="form-grid">
                 <div class="field">
                   <label for="companyName">업체명</label>
@@ -1564,8 +1569,10 @@
                 </div>
 
                 <div class="field-full">
-                  <input class="sr-only" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-                  <input type="hidden" name="subject" value="[S파트너스] 정책자금 상담 신청">
+                  <input class="sr-only" type="text" name="_honey" tabindex="-1" autocomplete="off">
+                  <input type="hidden" name="_subject" value="[S파트너스] 정책자금 상담 신청">
+                  <input type="hidden" name="_template" value="table">
+                  <input type="hidden" name="_next" value="https://s-partners.vercel.app/thanks.html">
                   <div class="submit-row">
                     <button class="btn btn-primary" type="submit">상담 신청 완료</button>
                     <p id="form-status" class="form-status" aria-live="polite"></p>
@@ -1604,7 +1611,7 @@
   </div>
 
   <script>
-    const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+    const FORM_ENDPOINT = "https://formsubmit.co/ajax/pure46q4@naver.com";
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -1642,12 +1649,6 @@
 
       if (!leadForm.reportValidity()) {
         statusMessage.textContent = "필수 항목을 모두 확인해 주세요.";
-        statusMessage.classList.add("error");
-        return;
-      }
-
-      if (FORM_ENDPOINT.includes("YOUR_FORM_ID")) {
-        statusMessage.textContent = "Formspree 폼 ID 연결 후 제출이 가능합니다.";
         statusMessage.classList.add("error");
         return;
       }
