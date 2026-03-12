@@ -1057,35 +1057,35 @@
               <div class="form-grid">
                 <div class="field">
                   <label for="companyName">상호명 / 업체명</label>
-                  <input id="companyName" name="companyName" type="text" placeholder="예: 에스파트너스" required>
+                  <input id="companyName" name="상호명" type="text" placeholder="예: 에스파트너스" required>
                 </div>
 
                 <div class="field">
                   <label for="ceoName">대표자 성함</label>
-                  <input id="ceoName" name="ceoName" type="text" placeholder="예: 박세한" required>
+                  <input id="ceoName" name="대표자명" type="text" placeholder="예: 박세한" required>
                 </div>
 
                 <div class="field-full">
                   <label>사업자 구분</label>
                   <div class="choice-group">
-                    <label><input type="radio" name="businessType" value="개인사업자" required> 개인사업자</label>
-                    <label><input type="radio" name="businessType" value="법인사업자" required> 법인사업자</label>
+                    <label><input type="radio" name="사업자구분" value="개인사업자" required> 개인사업자</label>
+                    <label><input type="radio" name="사업자구분" value="법인사업자" required> 법인사업자</label>
                   </div>
                 </div>
 
                 <div class="field">
                   <label for="phone">연락받을 번호</label>
-                  <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="예: 010-1234-5678" required>
+                  <input id="phone" name="연락처" type="tel" inputmode="tel" placeholder="예: 010-1234-5678" required>
                 </div>
 
                 <div class="field">
                   <label for="industry">현재 업종</label>
-                  <input id="industry" name="industry" type="text" placeholder="예: 도소매업, 서비스업, 제조업" required>
+                  <input id="industry" name="업종" type="text" placeholder="예: 도소매업, 서비스업, 제조업" required>
                 </div>
 
                 <div class="field">
                   <label for="annualRevenue">연 매출 규모</label>
-                  <select id="annualRevenue" name="annualRevenue" required>
+                  <select id="annualRevenue" name="연매출규모" required>
                     <option value="">대략 선택해 주세요</option>
                     <option value="3천만원 이하">3천만 원 이하</option>
                     <option value="3천만원~1억원">3천만 원 ~ 1억 원</option>
@@ -1096,7 +1096,7 @@
 
                 <div class="field">
                   <label for="fundNeed">상담받고 싶은 자금</label>
-                  <select id="fundNeed" name="fundNeed" required>
+                  <select id="fundNeed" name="상담희망자금" required>
                     <option value="">가장 가까운 항목을 골라 주세요</option>
                     <option value="운전자금">운전자금</option>
                     <option value="시설자금">시설자금</option>
@@ -1111,7 +1111,7 @@
                   <label for="message">현재 상황 / 궁금한 점</label>
                   <textarea
                     id="message"
-                    name="message"
+                    name="문의내용"
                     placeholder="예: 매출은 어느 정도 나오고 있고, 운영자금이 필요한 상황입니다. 가능한 방향이 궁금합니다."
                   ></textarea>
                 </div>
@@ -1126,14 +1126,14 @@
 
                 <div class="field-full">
                   <label class="agree-row">
-                    <input id="agree" name="agree" type="checkbox" value="동의" required>
+                    <input id="agree" name="개인정보동의" type="checkbox" value="동의" required>
                     <span>개인정보 수집 및 이용에 동의합니다. 상담 연락 목적에만 사용됩니다.</span>
                   </label>
                 </div>
 
                 <div class="field-full">
                   <input class="sr-only" type="text" name="_honey" tabindex="-1" autocomplete="off">
-                  <input type="hidden" name="_subject" value="[S파트너스] 정책자금 상담 신청">
+                  <input type="hidden" name="_subject" value="[에스파트너스] 정책자금 상담 신청">
                   <input type="hidden" name="_template" value="table">
                   <input type="hidden" name="_next" value="https://s-partners.vercel.app/thanks.html">
                   <div class="submit-row">
