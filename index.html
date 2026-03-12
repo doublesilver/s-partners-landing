@@ -1,0 +1,1686 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에스(S)파트너스 | 소상공인·중소기업 정책자금 상담</title>
+  <meta
+    name="description"
+    content="에스(S)파트너스는 소상공인과 중소기업을 위한 정책자금 상담 랜딩페이지입니다. 업종별 진단, 빠른 실무 대응, 승인 경험을 바탕으로 적합한 자금 방향을 안내합니다."
+  >
+  <meta name="theme-color" content="#f57a1f">
+  <meta property="og:title" content="에스(S)파트너스 | 정책자금 상담">
+  <meta
+    property="og:description"
+    content="운전자금, 시설자금, 창업자금, 보증연계, 정부지원금까지 사업 단계에 맞는 상담을 진행합니다."
+  >
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+  <style>
+    :root {
+      --bg: #f7f1eb;
+      --surface: rgba(255, 250, 245, 0.86);
+      --surface-strong: #fffaf5;
+      --surface-ink: #171411;
+      --card: rgba(255, 255, 255, 0.82);
+      --line: rgba(43, 31, 20, 0.1);
+      --line-strong: rgba(43, 31, 20, 0.16);
+      --orange-900: #6f2d05;
+      --orange-700: #a44c0c;
+      --orange-600: #cf6116;
+      --orange-500: #f57a1f;
+      --orange-300: #ffbb83;
+      --sand: #f0ddd0;
+      --text: #281f19;
+      --muted: #6d5b4f;
+      --shadow-xl: 0 30px 80px rgba(53, 31, 16, 0.13);
+      --shadow-md: 0 18px 40px rgba(53, 31, 16, 0.09);
+      --radius-xl: 34px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --container: min(1180px, calc(100vw - 40px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(245, 122, 31, 0.18), transparent 28%),
+        radial-gradient(circle at 90% 12%, rgba(245, 122, 31, 0.12), transparent 23%),
+        linear-gradient(180deg, #f9f1e8 0%, #f7f1eb 32%, #f4ede6 100%);
+      font-family: "Noto Sans KR", sans-serif;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.45) 0.85px, transparent 0.85px);
+      background-size: 12px 12px;
+      opacity: 0.35;
+      z-index: -1;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .wrap {
+      width: var(--container);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(247, 241, 235, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 82px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.32)),
+        linear-gradient(145deg, #ffcb9f, #f57a1f);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 12px 24px rgba(207, 97, 22, 0.22);
+      display: grid;
+      place-items: center;
+      color: var(--orange-900);
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .brand-text strong,
+    .section-title,
+    .hero-copy h1,
+    .portrait-copy h2,
+    .form-copy h2,
+    .thanks-title {
+      font-family: "Noto Serif KR", serif;
+      letter-spacing: -0.04em;
+    }
+
+    .brand-text {
+      display: grid;
+      gap: 2px;
+    }
+
+    .brand-text strong {
+      font-size: 1.05rem;
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 0.76rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: #59483e;
+    }
+
+    .nav a {
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--orange-500);
+      transition: width 0.25s ease;
+    }
+
+    .nav a:hover::after,
+    .nav a:focus-visible::after {
+      width: 100%;
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-info {
+      display: grid;
+      gap: 2px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    .header-info strong {
+      font-size: 1rem;
+      color: var(--surface-ink);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--orange-700), var(--orange-500));
+      color: #fff8f2;
+      box-shadow: 0 14px 32px rgba(207, 97, 22, 0.25);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(56, 39, 25, 0.12);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 44px 0 18px;
+    }
+
+    .hero-shell {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 42px;
+      padding: 42px;
+      background:
+        radial-gradient(circle at 14% 0%, rgba(255, 220, 186, 0.88), transparent 30%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(255, 248, 241, 0.66));
+      box-shadow: var(--shadow-xl);
+    }
+
+    .hero-shell::after {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: -60px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 122, 31, 0.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(207, 97, 22, 0.18);
+      color: var(--orange-900);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-copy h1 {
+      margin: 18px 0 18px;
+      font-size: clamp(2.2rem, 5vw, 4.3rem);
+      line-height: 1.12;
+      color: var(--surface-ink);
+    }
+
+    .hero-copy p {
+      margin: 0;
+      max-width: 58ch;
+      font-size: 1.04rem;
+      color: #4f4137;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 28px 0 0;
+    }
+
+    .hero-point {
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(55, 41, 28, 0.08);
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 10px 28px rgba(60, 38, 18, 0.06);
+    }
+
+    .hero-point strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      color: var(--surface-ink);
+    }
+
+    .hero-point span {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .hero-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: grid;
+      justify-items: center;
+      gap: 18px;
+    }
+
+    .visual-frame {
+      position: relative;
+      width: min(100%, 440px);
+      aspect-ratio: 0.82;
+      padding: 18px;
+      border-radius: 34px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 247, 239, 0.8));
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      box-shadow: 0 24px 50px rgba(64, 42, 24, 0.14);
+    }
+
+    .visual-frame::before {
+      content: "";
+      position: absolute;
+      inset: auto 20px 14px;
+      height: 28px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(32, 24, 17, 0.28), transparent 72%);
+      filter: blur(14px);
+      opacity: 0.36;
+    }
+
+    .portrait-main {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 26px;
+      background:
+        linear-gradient(180deg, rgba(236, 231, 228, 0.85), rgba(245, 238, 232, 0.95));
+      display: grid;
+      align-items: end;
+    }
+
+    .portrait-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .visual-card {
+      position: absolute;
+      left: -16px;
+      bottom: 24px;
+      max-width: 230px;
+      padding: 18px 18px 16px;
+      border-radius: 22px;
+      background: rgba(32, 24, 17, 0.88);
+      color: #f5ece1;
+      box-shadow: 0 18px 36px rgba(28, 19, 12, 0.22);
+    }
+
+    .visual-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .visual-card span {
+      display: block;
+      font-size: 0.86rem;
+      color: rgba(245, 236, 225, 0.78);
+    }
+
+    .section {
+      padding: 96px 0 0;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .section-kicker {
+      color: var(--orange-700);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.9rem);
+      line-height: 1.22;
+    }
+
+    .section-desc {
+      margin: 0;
+      max-width: 70ch;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .problem-grid,
+    .strength-grid,
+    .fund-grid,
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .problem-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .problem-card,
+    .strength-card,
+    .fund-card,
+    .faq-item,
+    .checkpoint-card {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.56);
+      border-radius: 26px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .problem-card {
+      padding: 28px;
+      min-height: 230px;
+    }
+
+    .problem-card::after,
+    .strength-card::after,
+    .fund-card::after,
+    .checkpoint-card::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245, 122, 31, 0.18), transparent 72%);
+      pointer-events: none;
+    }
+
+    .problem-card strong {
+      display: block;
+      margin-bottom: 14px;
+      font-size: 1.15rem;
+    }
+
+    .problem-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .strength-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .strength-card {
+      padding: 30px;
+    }
+
+    .strength-index {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      font-weight: 800;
+      color: var(--orange-900);
+      background: rgba(245, 122, 31, 0.12);
+    }
+
+    .strength-card h3,
+    .fund-card h3,
+    .faq-item h3,
+    .checkpoint-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+    }
+
+    .strength-card p,
+    .fund-card p,
+    .faq-item p,
+    .checkpoint-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .fund-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .fund-card {
+      padding: 24px 22px 22px;
+      min-height: 220px;
+    }
+
+    .fund-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+      display: grid;
+      place-items: center;
+      font-size: 1.25rem;
+      background: linear-gradient(145deg, rgba(255, 193, 144, 0.9), rgba(245, 122, 31, 0.16));
+    }
+
+    .process-shell {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .process-intro,
+    .process-list,
+    .portrait-shell,
+    .checkpoints-shell,
+    .faq-shell,
+    .form-shell {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.58);
+      border-radius: 32px;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .process-intro {
+      padding: 34px;
+      display: grid;
+      align-content: space-between;
+      min-height: 360px;
+      background:
+        linear-gradient(180deg, rgba(255, 252, 248, 0.9), rgba(251, 243, 236, 0.74));
+    }
+
+    .process-intro strong {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--orange-700);
+    }
+
+    .process-intro p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .process-list {
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .process-item {
+      display: grid;
+      grid-template-columns: 62px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(56, 39, 25, 0.08);
+    }
+
+    .process-item strong {
+      width: 62px;
+      height: 62px;
+      border-radius: 20px;
+      display: grid;
+      place-items: center;
+      font-size: 0.95rem;
+      color: var(--orange-900);
+      background: rgba(245, 122, 31, 0.12);
+    }
+
+    .process-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .process-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .portrait-shell {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      padding: 24px;
+    }
+
+    .portrait-card {
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 520px;
+      background: linear-gradient(180deg, #ebe5df 0%, #f2ece5 100%);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62);
+    }
+
+    .portrait-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .portrait-copy {
+      padding: 18px 10px 18px 8px;
+      display: grid;
+      align-content: center;
+      gap: 18px;
+    }
+
+    .portrait-copy .role {
+      color: var(--orange-700);
+      font-weight: 700;
+    }
+
+    .portrait-copy h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3.2vw, 3rem);
+      line-height: 1.22;
+    }
+
+    .quote-box {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(56, 39, 25, 0.08);
+    }
+
+    .quote-box p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    .portrait-marks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .portrait-marks span,
+    .point-badge {
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      background: rgba(245, 122, 31, 0.1);
+      color: var(--orange-900);
+    }
+
+    .checkpoints-shell,
+    .faq-shell {
+      padding: 24px;
+    }
+
+    .checkpoints-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .checkpoint-card {
+      padding: 26px;
+      min-height: 212px;
+    }
+
+    .faq-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .faq-item {
+      padding: 28px;
+    }
+
+    .form-shell {
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    }
+
+    .form-copy {
+      padding: 38px;
+      background:
+        linear-gradient(180deg, rgba(35, 26, 18, 0.96), rgba(60, 39, 21, 0.94)),
+        linear-gradient(135deg, var(--orange-700), var(--orange-500));
+      color: #f7eee5;
+    }
+
+    .form-copy h2 {
+      margin: 16px 0 18px;
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      line-height: 1.24;
+    }
+
+    .form-copy p {
+      margin: 0;
+      color: rgba(247, 238, 229, 0.76);
+    }
+
+    .form-copy ul {
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-copy li {
+      position: relative;
+      padding-left: 18px;
+      color: rgba(247, 238, 229, 0.88);
+    }
+
+    .form-copy li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--orange-300);
+    }
+
+    .form-card {
+      padding: 38px;
+      background: linear-gradient(180deg, rgba(255, 252, 248, 0.92), rgba(255, 247, 241, 0.84));
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field,
+    .field-full {
+      display: grid;
+      gap: 9px;
+    }
+
+    .field-full {
+      grid-column: 1 / -1;
+    }
+
+    .field label,
+    .field-full label {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--surface-ink);
+    }
+
+    .field input,
+    .field select,
+    .field-full input,
+    .field-full textarea {
+      width: 100%;
+      min-height: 56px;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(56, 39, 25, 0.1);
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--surface-ink);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .field textarea,
+    .field-full textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field-full input:focus,
+    .field-full textarea:focus {
+      outline: none;
+      border-color: rgba(245, 122, 31, 0.5);
+      box-shadow: 0 0 0 4px rgba(245, 122, 31, 0.1);
+    }
+
+    .choice-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .choice-group label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid rgba(56, 39, 25, 0.09);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .choice-group input {
+      accent-color: var(--orange-600);
+    }
+
+    .policy-box {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(56, 39, 25, 0.08);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .policy-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--surface-ink);
+    }
+
+    .agree-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.66);
+      border: 1px solid rgba(56, 39, 25, 0.08);
+    }
+
+    .agree-row input {
+      margin-top: 5px;
+      accent-color: var(--orange-600);
+    }
+
+    .agree-row span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .submit-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .submit-row .btn {
+      min-width: 210px;
+    }
+
+    .form-status {
+      min-height: 24px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .form-status.error {
+      color: #b02a17;
+    }
+
+    .form-status.success {
+      color: #126140;
+    }
+
+    .site-footer {
+      padding: 84px 0 54px;
+    }
+
+    .footer-shell {
+      padding: 32px;
+      border-radius: 28px;
+      background: rgba(29, 22, 17, 0.94);
+      color: rgba(247, 238, 229, 0.86);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-title {
+      display: grid;
+      gap: 4px;
+    }
+
+    .footer-title strong {
+      font-size: 1.15rem;
+      color: #fff4e9;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 28px;
+      color: rgba(247, 238, 229, 0.72);
+      font-size: 0.94rem;
+    }
+
+    .floating-bar {
+      position: fixed;
+      left: 20px;
+      right: 20px;
+      bottom: 18px;
+      z-index: 30;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .floating-bar a {
+      pointer-events: auto;
+      width: min(100%, 460px);
+      min-height: 58px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff7f0;
+      background: linear-gradient(135deg, #b75410, #f57a1f);
+      box-shadow: 0 24px 40px rgba(183, 84, 16, 0.28);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 1120px) {
+      .hero-grid,
+      .portrait-shell,
+      .form-shell,
+      .process-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .fund-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .checkpoints-grid,
+      .problem-grid,
+      .strength-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .visual-card {
+        left: 20px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav,
+      .header-info {
+        display: none;
+      }
+
+      .hero-shell {
+        padding: 28px 24px;
+      }
+
+      .hero-points,
+      .checkpoints-grid,
+      .problem-grid,
+      .strength-grid,
+      .fund-grid,
+      .faq-grid,
+      .footer-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding-top: 76px;
+      }
+
+      .process-item {
+        grid-template-columns: 1fr;
+      }
+
+      .form-copy,
+      .form-card,
+      .portrait-copy {
+        padding: 26px;
+      }
+
+      .portrait-card {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(100vw - 24px, 100%);
+      }
+
+      .header-inner {
+        min-height: 72px;
+      }
+
+      .header-cta .btn {
+        min-height: 46px;
+        padding: 0 16px;
+      }
+
+      .hero {
+        padding-top: 24px;
+      }
+
+      .hero-copy h1 {
+        font-size: 2.1rem;
+      }
+
+      .visual-frame {
+        aspect-ratio: 0.86;
+      }
+
+      .visual-card {
+        position: static;
+        max-width: none;
+        width: 100%;
+      }
+
+      .floating-bar {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+      }
+
+      .site-footer {
+        padding-bottom: 104px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="에스파트너스 홈">
+        <span class="brand-mark">S</span>
+        <span class="brand-text">
+          <strong>에스(S)파트너스</strong>
+          <span>S-Partners Policy Fund Consulting</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#strengths">강점</a>
+        <a href="#funds">지원 자금</a>
+        <a href="#process">진행 절차</a>
+        <a href="#representative">대표 소개</a>
+        <a href="#apply">상담 신청</a>
+      </nav>
+      <div class="header-cta">
+        <div class="header-info">
+          <span>대표번호</span>
+          <strong>1844-0835</strong>
+        </div>
+        <a class="btn btn-primary" href="#apply">상담 신청</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-shell reveal">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="eyebrow">소상공인 · 중소기업 정책자금 파트너</div>
+              <h1>
+                사업의 타이밍을 놓치지 않도록,
+                <br>
+                필요한 자금의 방향을
+                <br>
+                더 빠르고 정확하게 짚습니다
+              </h1>
+              <p>
+                에스(S)파트너스는 업종, 사업 단계, 매출 구조, 사업자 유형을 함께 살펴
+                운전자금, 시설자금, 창업자금, 보증연계, 정부지원금까지 현재 상황에 맞는 상담 흐름을 설계합니다.
+              </p>
+              <div class="hero-points">
+                <article class="hero-point">
+                  <strong>업종별 진단</strong>
+                  <span>도소매, 서비스, 제조, 외식업 등 업종 특성을 반영해 접근합니다.</span>
+                </article>
+                <article class="hero-point">
+                  <strong>빠른 실무 대응</strong>
+                  <span>복잡한 표현보다 실제 진행 순서와 준비 항목을 명확히 안내합니다.</span>
+                </article>
+                <article class="hero-point">
+                  <strong>승인 경험 기반</strong>
+                  <span>현장 경험을 바탕으로 가능성과 리스크를 현실적으로 설명합니다.</span>
+                </article>
+              </div>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#apply">정책자금 상담 신청</a>
+                <a class="btn btn-secondary" href="#process">진행 절차 보기</a>
+              </div>
+              <p class="hero-note">
+                상담 신청 후 순차적으로 검토되며, 사업장 상황과 정책 조건에 따라 안내 내용은 달라질 수 있습니다.
+              </p>
+            </div>
+
+            <div class="hero-visual">
+              <div class="visual-frame">
+                <div class="portrait-main">
+                  <img src="대표자사진1.jpg" alt="에스파트너스 박세한 대표">
+                </div>
+                <div class="visual-card">
+                  <strong>박세한 대표</strong>
+                  <span>소상공인 및 중소기업 정책자금 전문 지도사</span>
+                </div>
+              </div>
+              <span class="point-badge">S-Partners</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problems">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-kicker">Why Timing Matters</span>
+          <h2 class="section-title">정책자금은 정보보다 타이밍에서 격차가 벌어집니다</h2>
+          <p class="section-desc">
+            필요한 자금이 생겼을 때 가장 먼저 필요한 것은 단순한 목록이 아니라
+            현재 상황에서 어떤 자금부터 검토해야 하는지에 대한 우선순위입니다.
+          </p>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-card reveal">
+            <strong>어디서부터 확인해야 할지 막막한 경우</strong>
+            <p>
+              자금 종류는 많은데 사업자 유형, 업종, 매출 규모에 따라 접근 방식이 달라지기 때문에
+              시작부터 방향을 잘못 잡으면 시간만 소모될 수 있습니다.
+            </p>
+          </article>
+          <article class="problem-card reveal">
+            <strong>서류 준비보다 먼저 판단이 필요한 경우</strong>
+            <p>
+              무조건 서류부터 모으기보다 현재 사업 구조에서 적합한 항목을 먼저 가려내야
+              불필요한 반복 작업을 줄일 수 있습니다.
+            </p>
+          </article>
+          <article class="problem-card reveal">
+            <strong>빠른 대응이 필요한 자금 공백 상황</strong>
+            <p>
+              운영 흐름이 급한 상황에서는 여러 선택지를 동시에 보기보다
+              가장 우선순위가 높은 자금 라인을 빠르게 선별하는 것이 중요합니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="strengths">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-kicker">S-Partners Strength</span>
+          <h2 class="section-title">에스(S)파트너스는 설명보다 실무 흐름에 집중합니다</h2>
+          <p class="section-desc">
+            과장된 숫자 대신, 실제 상담에서 필요한 판단 기준과 진행 순서를 분명하게 전달하는 데 초점을 둡니다.
+          </p>
+        </div>
+        <div class="strength-grid">
+          <article class="strength-card reveal">
+            <div class="strength-index">01</div>
+            <h3>업종별 진단</h3>
+            <p>
+              사업의 업종과 운영 구조를 먼저 보고 자금 항목의 우선순위를 정리합니다.
+              같은 매출 규모라도 업종에 따라 접근 논리는 달라질 수 있습니다.
+            </p>
+          </article>
+          <article class="strength-card reveal">
+            <div class="strength-index">02</div>
+            <h3>빠른 일처리</h3>
+            <p>
+              복잡한 설명을 길게 늘어놓기보다 필요한 항목, 확인 순서, 준비 포인트를
+              빠르게 정리해 상담 흐름이 끊기지 않도록 합니다.
+            </p>
+          </article>
+          <article class="strength-card reveal">
+            <div class="strength-index">03</div>
+            <h3>승인 경험 기반의 현실적 안내</h3>
+            <p>
+              가능성만 강조하는 방식이 아니라 예상되는 변수와 보완 포인트까지 함께 보고
+              보다 현실적인 방향으로 상담을 진행합니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="funds">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-kicker">Funding Categories</span>
+          <h2 class="section-title">현재 상담 가능한 주요 자금 카테고리</h2>
+          <p class="section-desc">
+            실제 상담에서는 하나의 항목만 보는 것이 아니라 사업 상황에 맞춰
+            여러 자금 카테고리를 함께 비교해 방향을 잡습니다.
+          </p>
+        </div>
+        <div class="fund-grid">
+          <article class="fund-card reveal">
+            <div class="fund-icon">01</div>
+            <h3>운전자금</h3>
+            <p>사업 운영 흐름을 유지하기 위한 자금 계획을 검토합니다.</p>
+          </article>
+          <article class="fund-card reveal">
+            <div class="fund-icon">02</div>
+            <h3>시설자금</h3>
+            <p>시설 투자와 확장에 필요한 자금 방향을 사업 단계에 맞춰 살펴봅니다.</p>
+          </article>
+          <article class="fund-card reveal">
+            <div class="fund-icon">03</div>
+            <h3>창업자금</h3>
+            <p>예비창업자 또는 초기 사업자의 조건을 기준으로 접근합니다.</p>
+          </article>
+          <article class="fund-card reveal">
+            <div class="fund-icon">04</div>
+            <h3>보증연계</h3>
+            <p>보증과 연계한 자금 구조가 적합한지 사업 상황을 기준으로 판단합니다.</p>
+          </article>
+          <article class="fund-card reveal">
+            <div class="fund-icon">05</div>
+            <h3>정부지원금</h3>
+            <p>현재 사업 구조와 맞닿는 지원사업이나 지원금 방향을 함께 안내합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-kicker">Process</span>
+          <h2 class="section-title">상담은 복잡하지 않게, 순서는 분명하게 진행합니다</h2>
+          <p class="section-desc">
+            무작정 서류를 요구하기보다 현재 사업 상황을 먼저 확인하고,
+            적합한 자금 방향과 준비 포인트를 순차적으로 정리합니다.
+          </p>
+        </div>
+        <div class="process-shell">
+          <div class="process-intro reveal">
+            <div>
+              <strong>상담 신청 후 흐름</strong>
+              <p>
+                폼으로 접수된 내용을 바탕으로 사업자 유형, 업종, 매출 구간, 희망 자금 방향을 먼저 확인합니다.
+                이후 필요한 경우 추가 확인 사항을 순차적으로 안내합니다.
+              </p>
+            </div>
+            <p>
+              신청이 많을 경우 순차 검토로 진행되며,
+              사업장 상황과 정책 기준에 따라 실제 안내 범위는 달라질 수 있습니다.
+            </p>
+          </div>
+
+          <div class="process-list">
+            <article class="process-item reveal">
+              <strong>STEP 1</strong>
+              <div>
+                <h3>상담 신청 접수</h3>
+                <p>업체명, 연락처, 업종, 사업자 유형, 희망 자금 방향을 기준으로 기본 정보를 받습니다.</p>
+              </div>
+            </article>
+            <article class="process-item reveal">
+              <strong>STEP 2</strong>
+              <div>
+                <h3>사업 상황 1차 검토</h3>
+                <p>소상공인인지 중소기업인지, 개인사업자인지 법인사업자인지 등을 기준으로 우선순위를 잡습니다.</p>
+              </div>
+            </article>
+            <article class="process-item reveal">
+              <strong>STEP 3</strong>
+              <div>
+                <h3>적합 자금 방향 안내</h3>
+                <p>운전자금, 시설자금, 창업자금, 보증연계, 정부지원금 가운데 먼저 검토할 항목을 제안합니다.</p>
+              </div>
+            </article>
+            <article class="process-item reveal">
+              <strong>STEP 4</strong>
+              <div>
+                <h3>필요 항목 및 후속 절차 설명</h3>
+                <p>진행 시 유의점과 준비 포인트를 안내해 실제 상담이 다음 단계로 이어지도록 돕습니다.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="representative">
+      <div class="wrap">
+        <div class="portrait-shell reveal">
+          <div class="portrait-card">
+            <img src="대표자사진2.jpg" alt="에스파트너스 박세한 대표 프로필 사진">
+          </div>
+          <div class="portrait-copy">
+            <span class="role">Representative Message</span>
+            <h2>박세한 대표가 직접, 사업의 현재 상황에 맞는 방향을 함께 짚어드립니다</h2>
+            <div class="quote-box">
+              <p>
+                “항상 대표님들께 힘이 될 수 있는 S파트너스가 되겠습니다.”
+              </p>
+            </div>
+            <p>
+              숫자로 과장하기보다 현재 사업 단계에서 먼저 봐야 할 자금 방향,
+              놓치기 쉬운 체크 포인트, 실제 진행 흐름을 분명하게 안내하는 상담을 지향합니다.
+            </p>
+            <div class="portrait-marks">
+              <span>소상공인 정책자금 상담</span>
+              <span>중소기업 자금 방향 설계</span>
+              <span>사업자 유형별 맞춤 접근</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="checkpoint">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-kicker">Checklist</span>
+          <h2 class="section-title">상담 전에 체크하면 더 빠르게 방향을 잡을 수 있습니다</h2>
+          <p class="section-desc">
+            모든 내용을 미리 준비할 필요는 없지만, 아래 항목을 알고 있으면 상담 흐름이 훨씬 선명해집니다.
+          </p>
+        </div>
+        <div class="checkpoints-shell">
+          <div class="checkpoints-grid">
+            <article class="checkpoint-card reveal">
+              <h3>사업자 유형</h3>
+              <p>개인사업자와 법인사업자는 검토 구조가 다르기 때문에 기본 구분이 중요합니다.</p>
+            </article>
+            <article class="checkpoint-card reveal">
+              <h3>업종과 사업 단계</h3>
+              <p>업종 특성과 운영 단계에 따라 먼저 봐야 할 자금 카테고리가 달라집니다.</p>
+            </article>
+            <article class="checkpoint-card reveal">
+              <h3>연매출 구간</h3>
+              <p>매출 구조와 흐름은 자금 방향을 정할 때 핵심 기준이 됩니다.</p>
+            </article>
+            <article class="checkpoint-card reveal">
+              <h3>필요한 자금 목적</h3>
+              <p>운영 안정화인지, 설비 투자나 확장인지에 따라 접근 순서가 달라집니다.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="section-kicker">FAQ</span>
+          <h2 class="section-title">자주 묻는 질문</h2>
+          <p class="section-desc">
+            처음 상담을 신청하는 분들이 가장 많이 확인하는 항목만 간단하게 정리했습니다.
+          </p>
+        </div>
+        <div class="faq-shell">
+          <div class="faq-grid">
+            <article class="faq-item reveal">
+              <h3>어떤 업종이 상담 대상인가요?</h3>
+              <p>소상공인과 중소기업을 중심으로 상담하며, 업종 구조에 따라 자금 방향을 다르게 검토합니다.</p>
+            </article>
+            <article class="faq-item reveal">
+              <h3>개인사업자와 법인사업자 모두 가능한가요?</h3>
+              <p>가능합니다. 다만 사업자 유형에 따라 먼저 확인해야 하는 기준과 준비 포인트가 달라집니다.</p>
+            </article>
+            <article class="faq-item reveal">
+              <h3>한 번에 여러 자금을 같이 볼 수 있나요?</h3>
+              <p>가능합니다. 실제 상담에서는 한 가지 항목만 보지 않고 현재 상황에서 검토 우선순위를 함께 정리합니다.</p>
+            </article>
+            <article class="faq-item reveal">
+              <h3>상담 신청 후 바로 연락이 오나요?</h3>
+              <p>신청 순서대로 확인 후 연락드립니다. 접수량에 따라 순차적으로 안내되며 즉시 연결을 보장하지는 않습니다.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apply">
+      <div class="wrap">
+        <div class="form-shell reveal">
+          <div class="form-copy">
+            <span class="section-kicker" style="color:#ffcfaa;">Apply Now</span>
+            <h2>상담신청을 남겨주시면 순차적으로 확인 후 연락드리겠습니다</h2>
+            <p>
+              폼 제출 후 접수 내용을 검토하여 사업 상황에 맞는 방향을 확인합니다.
+              정확한 판단을 위해 실제 진행 가능 여부는 추가 확인이 필요할 수 있습니다.
+            </p>
+            <ul>
+              <li>소상공인 · 중소기업 정책자금 중심 상담</li>
+              <li>운전자금, 시설자금, 창업자금, 보증연계, 정부지원금 검토</li>
+              <li>업종별 진단과 사업자 유형을 반영한 방향 안내</li>
+            </ul>
+          </div>
+
+          <div class="form-card">
+            <form id="lead-form" novalidate>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="companyName">업체명</label>
+                  <input id="companyName" name="companyName" type="text" placeholder="업체명을 입력해 주세요" required>
+                </div>
+                <div class="field">
+                  <label for="ceoName">대표자명</label>
+                  <input id="ceoName" name="ceoName" type="text" placeholder="대표자명을 입력해 주세요" required>
+                </div>
+
+                <div class="field-full">
+                  <label>사업자 유형</label>
+                  <div class="choice-group">
+                    <label><input type="radio" name="businessType" value="개인사업자" required> 개인사업자</label>
+                    <label><input type="radio" name="businessType" value="법인사업자" required> 법인사업자</label>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="phone">연락처</label>
+                  <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="010-0000-0000" required>
+                </div>
+                <div class="field">
+                  <label for="industry">업종</label>
+                  <input id="industry" name="industry" type="text" placeholder="예: 도소매업, 서비스업, 제조업" required>
+                </div>
+
+                <div class="field">
+                  <label for="annualRevenue">연매출 구간</label>
+                  <select id="annualRevenue" name="annualRevenue" required>
+                    <option value="">선택해 주세요</option>
+                    <option value="3천만원 이하">3천만원 이하</option>
+                    <option value="3천만원~1억원">3천만원~1억원</option>
+                    <option value="1억원~5억원">1억원~5억원</option>
+                    <option value="5억원 이상">5억원 이상</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="fundNeed">희망 자금 방향</label>
+                  <select id="fundNeed" name="fundNeed" required>
+                    <option value="">선택해 주세요</option>
+                    <option value="운전자금">운전자금</option>
+                    <option value="시설자금">시설자금</option>
+                    <option value="창업자금">창업자금</option>
+                    <option value="보증연계">보증연계</option>
+                    <option value="정부지원금">정부지원금</option>
+                    <option value="복합 검토">복합 검토</option>
+                  </select>
+                </div>
+
+                <div class="field-full">
+                  <label for="message">문의 내용</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="현재 상황이나 궁금한 내용을 남겨주시면 검토에 도움이 됩니다"
+                  ></textarea>
+                </div>
+
+                <div class="field-full">
+                  <div class="policy-box">
+                    <strong>개인정보 수집 및 이용 안내</strong>
+                    수집 항목은 업체명, 대표자명, 연락처, 사업자 유형, 업종, 연매출 구간, 희망 자금 방향, 문의 내용이며
+                    상담 접수 및 응대 목적으로만 활용됩니다. 법령에 따른 보관 사유가 없는 한 목적 달성 후 지체 없이 파기합니다.
+                  </div>
+                </div>
+
+                <div class="field-full">
+                  <label class="agree-row">
+                    <input id="agree" name="agree" type="checkbox" value="동의" required>
+                    <span>개인정보 수집 및 이용에 동의합니다.</span>
+                  </label>
+                </div>
+
+                <div class="field-full">
+                  <input class="sr-only" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+                  <input type="hidden" name="subject" value="[S파트너스] 정책자금 상담 신청">
+                  <div class="submit-row">
+                    <button class="btn btn-primary" type="submit">상담 신청 완료</button>
+                    <p id="form-status" class="form-status" aria-live="polite"></p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-shell">
+        <div class="footer-top">
+          <div class="footer-title">
+            <strong>에스(S)파트너스</strong>
+            <span>소상공인 · 중소기업 정책자금 상담</span>
+          </div>
+          <span>대표번호 1844-0835</span>
+        </div>
+        <div class="footer-grid">
+          <div>대표자: 박세한</div>
+          <div>사업자등록번호: 545-10-03436</div>
+          <div>주소: 경기도 의정부시 배꽃길 7 더리브센텀스퀘어 2동 716호</div>
+          <div>이메일 수신: pure46q4@naver.com</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-bar">
+    <a href="#apply">30초 상담 신청 남기기</a>
+  </div>
+
+  <script>
+    const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll(".reveal").forEach((element) => {
+      revealObserver.observe(element);
+    });
+
+    const leadForm = document.getElementById("lead-form");
+    const statusMessage = document.getElementById("form-status");
+    const phoneInput = document.getElementById("phone");
+
+    phoneInput.addEventListener("input", (event) => {
+      const digits = event.target.value.replace(/\D/g, "").slice(0, 11);
+      if (digits.length < 4) {
+        event.target.value = digits;
+        return;
+      }
+      if (digits.length < 8) {
+        event.target.value = digits.replace(/(\d{3})(\d+)/, "$1-$2");
+        return;
+      }
+      event.target.value = digits.replace(/(\d{3})(\d{4})(\d+)/, "$1-$2-$3");
+    });
+
+    leadForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      statusMessage.className = "form-status";
+
+      if (!leadForm.reportValidity()) {
+        statusMessage.textContent = "필수 항목을 모두 확인해 주세요.";
+        statusMessage.classList.add("error");
+        return;
+      }
+
+      if (FORM_ENDPOINT.includes("YOUR_FORM_ID")) {
+        statusMessage.textContent = "Formspree 폼 ID 연결 후 제출이 가능합니다.";
+        statusMessage.classList.add("error");
+        return;
+      }
+
+      const submitButton = leadForm.querySelector("button[type='submit']");
+      const formData = new FormData(leadForm);
+
+      submitButton.disabled = true;
+      submitButton.textContent = "접수 중입니다...";
+      statusMessage.textContent = "신청 내용을 전송하고 있습니다.";
+
+      try {
+        const response = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("submit_failed");
+        }
+
+        window.location.href = "thanks.html";
+      } catch (error) {
+        statusMessage.textContent = "전송 중 문제가 발생했습니다. 잠시 후 다시 시도해 주세요.";
+        statusMessage.classList.add("error");
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "상담 신청 완료";
+      }
+    });
+  </script>
+</body>
+</html>
