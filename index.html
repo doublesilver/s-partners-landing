@@ -1024,25 +1024,25 @@
       <div class="wrap">
         <div class="section-head">
           <span>상담 신청</span>
-          <h2 class="serif">상담신청을 남겨주시면 순차적으로 확인 후 연락드리겠습니다</h2>
+          <h2 class="serif">간단히 남겨주시면 확인 후 연락드리겠습니다</h2>
           <p>
-            현재 매출 구간, 업종, 사업자 유형, 자금 목적 정도만 남겨주셔도
-            상담 방향을 잡는 데 충분합니다.
+            정확히 모르시는 항목은 대략적으로 적어주셔도 괜찮습니다.
+            현재 상황을 파악할 수 있을 정도면 충분합니다.
           </p>
         </div>
 
         <div class="apply-shell">
           <aside class="card">
             <div class="apply-copy">
-              <h3 class="serif">상담 전에 이 정도만 정리해 주세요</h3>
+              <h3 class="serif">이 정도만 알려주셔도 상담 방향을 잡을 수 있습니다</h3>
               <p>
-                모든 내용을 자세히 적지 않으셔도 됩니다.
-                기본 정보만 있어도 현재 상황에 맞는 검토 방향을 정리할 수 있습니다.
+                모든 내용을 자세히 적으실 필요는 없습니다.
+                기본 정보와 현재 상황만 알 수 있으면 충분합니다.
               </p>
               <ul>
                 <li>개인사업자인지 법인사업자인지</li>
-                <li>현재 업종과 대략적인 매출 구간</li>
-                <li>운영 안정화인지 확장 목적 자금인지</li>
+                <li>현재 하시는 업종과 대략적인 매출 규모</li>
+                <li>운영자금이 필요한지, 확장 자금이 필요한지</li>
               </ul>
             </div>
           </aside>
@@ -1056,17 +1056,17 @@
             >
               <div class="form-grid">
                 <div class="field">
-                  <label for="companyName">업체명</label>
-                  <input id="companyName" name="companyName" type="text" placeholder="업체명을 입력해 주세요" required>
+                  <label for="companyName">상호명 / 업체명</label>
+                  <input id="companyName" name="companyName" type="text" placeholder="예: 에스파트너스" required>
                 </div>
 
                 <div class="field">
-                  <label for="ceoName">대표자명</label>
-                  <input id="ceoName" name="ceoName" type="text" placeholder="대표자명을 입력해 주세요" required>
+                  <label for="ceoName">대표자 성함</label>
+                  <input id="ceoName" name="ceoName" type="text" placeholder="예: 박세한" required>
                 </div>
 
                 <div class="field-full">
-                  <label>사업자 유형</label>
+                  <label>사업자 구분</label>
                   <div class="choice-group">
                     <label><input type="radio" name="businessType" value="개인사업자" required> 개인사업자</label>
                     <label><input type="radio" name="businessType" value="법인사업자" required> 법인사업자</label>
@@ -1074,60 +1074,60 @@
                 </div>
 
                 <div class="field">
-                  <label for="phone">연락처</label>
-                  <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="010-0000-0000" required>
+                  <label for="phone">연락받을 번호</label>
+                  <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="예: 010-1234-5678" required>
                 </div>
 
                 <div class="field">
-                  <label for="industry">업종</label>
+                  <label for="industry">현재 업종</label>
                   <input id="industry" name="industry" type="text" placeholder="예: 도소매업, 서비스업, 제조업" required>
                 </div>
 
                 <div class="field">
-                  <label for="annualRevenue">연매출 구간</label>
+                  <label for="annualRevenue">연 매출 규모</label>
                   <select id="annualRevenue" name="annualRevenue" required>
-                    <option value="">선택해 주세요</option>
-                    <option value="3천만원 이하">3천만원 이하</option>
-                    <option value="3천만원~1억원">3천만원~1억원</option>
-                    <option value="1억원~5억원">1억원~5억원</option>
-                    <option value="5억원 이상">5억원 이상</option>
+                    <option value="">대략 선택해 주세요</option>
+                    <option value="3천만원 이하">3천만 원 이하</option>
+                    <option value="3천만원~1억원">3천만 원 ~ 1억 원</option>
+                    <option value="1억원~5억원">1억 원 ~ 5억 원</option>
+                    <option value="5억원 이상">5억 원 이상</option>
                   </select>
                 </div>
 
                 <div class="field">
-                  <label for="fundNeed">희망 자금 방향</label>
+                  <label for="fundNeed">상담받고 싶은 자금</label>
                   <select id="fundNeed" name="fundNeed" required>
-                    <option value="">선택해 주세요</option>
+                    <option value="">가장 가까운 항목을 골라 주세요</option>
                     <option value="운전자금">운전자금</option>
                     <option value="시설자금">시설자금</option>
                     <option value="창업자금">창업자금</option>
                     <option value="보증연계">보증연계</option>
                     <option value="정부지원금">정부지원금</option>
-                    <option value="복합 검토">복합 검토</option>
+                    <option value="복합 검토">잘 모르겠어서 같이 상담받고 싶음</option>
                   </select>
                 </div>
 
                 <div class="field-full">
-                  <label for="message">문의 내용</label>
+                  <label for="message">현재 상황 / 궁금한 점</label>
                   <textarea
                     id="message"
                     name="message"
-                    placeholder="현재 상황이나 궁금한 내용을 남겨주시면 검토에 도움이 됩니다"
+                    placeholder="예: 매출은 어느 정도 나오고 있고, 운영자금이 필요한 상황입니다. 가능한 방향이 궁금합니다."
                   ></textarea>
                 </div>
 
                 <div class="field-full">
                   <div class="policy-box">
                     <strong>개인정보 수집 및 이용 안내</strong>
-                    수집 항목은 업체명, 대표자명, 연락처, 사업자 유형, 업종, 연매출 구간, 희망 자금 방향, 문의 내용이며
-                    상담 접수 및 응대 목적으로만 활용됩니다. 목적 달성 후에는 관련 법령에 따라 파기합니다.
+                    입력하신 정보는 상담 접수와 연락 안내를 위해서만 사용되며,
+                    상담 목적이 끝난 뒤에는 관련 법령에 따라 보관 또는 파기됩니다.
                   </div>
                 </div>
 
                 <div class="field-full">
                   <label class="agree-row">
                     <input id="agree" name="agree" type="checkbox" value="동의" required>
-                    <span>개인정보 수집 및 이용에 동의합니다.</span>
+                    <span>개인정보 수집 및 이용에 동의합니다. 상담 연락 목적에만 사용됩니다.</span>
                   </label>
                 </div>
 
@@ -1137,7 +1137,7 @@
                   <input type="hidden" name="_template" value="table">
                   <input type="hidden" name="_next" value="https://s-partners.vercel.app/thanks.html">
                   <div class="submit-row">
-                    <button class="btn btn-primary" type="submit">상담 신청 완료</button>
+                    <button class="btn btn-primary" type="submit">상담 신청 남기기</button>
                     <p id="form-status" class="form-status" aria-live="polite"></p>
                   </div>
                 </div>
@@ -1188,7 +1188,7 @@
       statusMessage.className = "form-status";
 
       if (!leadForm.reportValidity()) {
-        statusMessage.textContent = "필수 항목을 모두 확인해 주세요.";
+        statusMessage.textContent = "빠진 항목이 없는지 확인해 주세요.";
         statusMessage.classList.add("error");
         return;
       }
@@ -1197,8 +1197,8 @@
       const formData = new FormData(leadForm);
 
       submitButton.disabled = true;
-      submitButton.textContent = "접수 중입니다...";
-      statusMessage.textContent = "신청 내용을 전송하고 있습니다.";
+      submitButton.textContent = "보내는 중입니다...";
+      statusMessage.textContent = "상담 신청 내용을 전송하고 있습니다.";
 
       try {
         const response = await fetch(FORM_ENDPOINT, {
@@ -1215,11 +1215,11 @@
 
         window.location.href = "thanks.html";
       } catch (error) {
-        statusMessage.textContent = "전송 중 문제가 발생했습니다. 잠시 후 다시 시도해 주세요.";
+        statusMessage.textContent = "전송 중 문제가 생겼습니다. 잠시 후 다시 시도해 주세요.";
         statusMessage.classList.add("error");
       } finally {
         submitButton.disabled = false;
-        submitButton.textContent = "상담 신청 완료";
+        submitButton.textContent = "상담 신청 남기기";
       }
     });
   </script>
