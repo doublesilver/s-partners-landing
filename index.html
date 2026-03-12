@@ -8,7 +8,7 @@
     name="description"
     content="에스(S)파트너스는 소상공인과 중소기업을 위한 정책자금 상담 랜딩페이지입니다. 업종별 진단, 빠른 실무 대응, 승인 경험을 바탕으로 사업 상황에 맞는 자금 방향을 안내합니다."
   >
-  <meta name="theme-color" content="#f57b22">
+  <meta name="theme-color" content="#c46d28">
   <meta property="og:title" content="에스(S)파트너스 | 정책자금 상담">
   <meta
     property="og:description"
@@ -18,24 +18,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@500;700&display=swap"
     rel="stylesheet"
   >
   <style>
     :root {
-      --bg: #f6f1ea;
-      --bg-soft: #fcfaf7;
+      --bg: #f4efe7;
+      --bg-soft: #fbf8f3;
       --surface: #fffdf9;
-      --surface-soft: rgba(255, 255, 255, 0.82);
-      --ink: #1f1814;
-      --ink-soft: #625449;
-      --line: rgba(42, 31, 22, 0.1);
-      --line-strong: rgba(42, 31, 22, 0.16);
-      --orange: #f57b22;
-      --orange-deep: #b85412;
-      --orange-soft: #ffe2cb;
-      --dark: #201915;
-      --shadow: 0 18px 40px rgba(39, 27, 18, 0.08);
+      --surface-soft: rgba(255, 253, 249, 0.86);
+      --ink: #1d1815;
+      --ink-soft: #65564b;
+      --ink-faint: #8c7c70;
+      --line: rgba(43, 31, 22, 0.11);
+      --line-strong: rgba(43, 31, 22, 0.18);
+      --accent: #c46d28;
+      --accent-deep: #9f541a;
+      --accent-soft: #efe0d1;
+      --dark: #1f1a17;
+      --dark-soft: #2a221d;
+      --shadow: 0 20px 50px rgba(36, 26, 18, 0.07);
       --radius-xl: 30px;
       --radius-lg: 22px;
       --radius-md: 16px;
@@ -54,10 +56,10 @@
       margin: 0;
       color: var(--ink);
       font-family: "Noto Sans KR", sans-serif;
-      line-height: 1.6;
+      line-height: 1.65;
       background:
-        radial-gradient(circle at top left, rgba(245, 123, 34, 0.12), transparent 22%),
-        linear-gradient(180deg, #f5efe8 0%, #f7f2ec 100%);
+        radial-gradient(circle at top left, rgba(196, 109, 40, 0.08), transparent 20%),
+        linear-gradient(180deg, #f4efe7 0%, #f7f3ee 100%);
     }
 
     img {
@@ -82,17 +84,22 @@
       margin: 0 auto;
     }
 
+    .serif {
+      font-family: "Noto Serif KR", serif;
+      letter-spacing: -0.04em;
+    }
+
     .site-header {
       position: sticky;
       top: 0;
       z-index: 20;
-      backdrop-filter: blur(12px);
-      background: rgba(246, 241, 234, 0.78);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+      backdrop-filter: blur(14px);
+      background: rgba(244, 239, 231, 0.82);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.62);
     }
 
     .header-inner {
-      min-height: 68px;
+      min-height: 70px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -112,10 +119,10 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      color: #fff8f2;
-      background: linear-gradient(135deg, var(--orange-deep), var(--orange));
+      color: #fff9f3;
+      background: linear-gradient(135deg, var(--accent-deep), var(--accent));
       font-weight: 800;
-      box-shadow: 0 12px 22px rgba(184, 84, 18, 0.2);
+      box-shadow: 0 12px 22px rgba(159, 84, 26, 0.18);
       flex: 0 0 auto;
     }
 
@@ -131,9 +138,9 @@
     }
 
     .brand-copy span {
-      font-size: 0.74rem;
+      font-size: 0.73rem;
       color: var(--ink-soft);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -176,14 +183,14 @@
     }
 
     .btn-primary {
-      color: #fff9f3;
-      background: linear-gradient(135deg, var(--orange-deep), var(--orange));
-      box-shadow: 0 14px 24px rgba(184, 84, 18, 0.2);
+      color: #fff8f2;
+      background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+      box-shadow: 0 14px 24px rgba(159, 84, 26, 0.18);
     }
 
     .btn-secondary {
       color: var(--ink);
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.7);
       border: 1px solid var(--line);
     }
 
@@ -192,98 +199,75 @@
     }
 
     .hero-shell {
-      background: var(--surface);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
       overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      gap: 0;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(31, 26, 23, 0.98), rgba(40, 34, 29, 0.96));
+      color: #f6ede3;
+      box-shadow: var(--shadow);
     }
 
     .hero-copy {
-      padding: 24px 18px;
+      padding: 28px 20px 24px;
       display: grid;
-      gap: 16px;
+      gap: 18px;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      width: fit-content;
-      min-height: 36px;
-      padding: 0 12px;
-      border-radius: 999px;
-      background: var(--orange-soft);
-      color: var(--orange-deep);
-      font-size: 0.82rem;
+    .hero-kicker {
+      color: rgba(246, 237, 227, 0.72);
+      font-size: 0.78rem;
       font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
 
     .hero-copy h1 {
       margin: 0;
-      font-size: clamp(1.95rem, 8vw, 3.4rem);
-      line-height: 1.2;
-      letter-spacing: -0.04em;
+      font-size: clamp(2.05rem, 8vw, 3.9rem);
+      line-height: 1.22;
     }
 
     .hero-copy p {
       margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.97rem;
+      color: rgba(246, 237, 227, 0.74);
+      font-size: 0.96rem;
     }
 
-    .hero-points {
+    .hero-divider {
+      width: 54px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    .hero-summary {
       display: grid;
       gap: 10px;
-      padding: 0;
-      margin: 2px 0 0;
-      list-style: none;
+      padding: 16px 0 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .hero-points li {
-      padding-left: 16px;
-      position: relative;
-      color: var(--ink);
-      font-size: 0.92rem;
-      font-weight: 600;
+    .hero-summary strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #fff4e6;
     }
 
-    .hero-points li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 11px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--orange);
+    .hero-summary span {
+      display: block;
+      color: rgba(246, 237, 227, 0.7);
+      font-size: 0.9rem;
     }
 
     .hero-actions {
       display: flex;
-      gap: 10px;
       flex-wrap: wrap;
+      gap: 10px;
       padding-top: 4px;
-    }
-
-    .hero-actions .btn {
-      min-width: 150px;
-    }
-
-    .hero-note {
-      font-size: 0.88rem;
-      color: var(--ink-soft);
     }
 
     .hero-photo {
       position: relative;
       min-height: 390px;
-      background: linear-gradient(180deg, #ece4db 0%, #f5eee7 100%);
+      background: linear-gradient(180deg, #e9dfd3 0%, #f3ece5 100%);
     }
 
     .hero-photo img {
@@ -293,146 +277,178 @@
       object-position: center top;
     }
 
-    .hero-caption {
+    .hero-quote {
       position: absolute;
       left: 14px;
       right: 14px;
       bottom: 14px;
       padding: 16px 18px;
-      border-radius: 20px;
-      background: rgba(30, 24, 20, 0.86);
-      color: #f6eee6;
+      border-radius: 18px;
+      background: rgba(255, 253, 249, 0.9);
+      color: var(--ink);
+      box-shadow: 0 12px 24px rgba(33, 24, 18, 0.08);
     }
 
-    .hero-caption strong {
+    .hero-quote strong {
       display: block;
       margin-bottom: 4px;
       font-size: 1rem;
     }
 
-    .hero-caption span {
+    .hero-quote span {
       display: block;
-      color: rgba(246, 238, 230, 0.74);
+      color: var(--ink-soft);
       font-size: 0.84rem;
     }
 
     .section {
-      padding: 68px 0 0;
+      padding: 76px 0 0;
     }
 
     .section-head {
       display: grid;
-      gap: 10px;
-      margin-bottom: 22px;
+      gap: 12px;
+      margin-bottom: 24px;
     }
 
     .section-head span {
-      color: var(--orange-deep);
-      font-size: 0.8rem;
+      color: var(--accent-deep);
+      font-size: 0.78rem;
       font-weight: 800;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
     .section-head h2 {
       margin: 0;
-      font-size: clamp(1.55rem, 6vw, 2.6rem);
-      line-height: 1.28;
-      letter-spacing: -0.04em;
+      font-size: clamp(1.55rem, 6vw, 2.8rem);
+      line-height: 1.34;
     }
 
     .section-head p {
       margin: 0;
       color: var(--ink-soft);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
-    .panel {
-      background: var(--surface);
+    .editorial {
+      padding: 0 2px;
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+
+    .editorial strong {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .split-block {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface-soft);
       border: 1px solid rgba(255, 255, 255, 0.68);
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow);
     }
 
-    .panel-dark {
-      color: #f4ece3;
-      background: linear-gradient(180deg, rgba(30, 24, 20, 0.98), rgba(43, 34, 27, 0.95));
+    .card-dark {
+      background: linear-gradient(180deg, rgba(31, 26, 23, 0.98), rgba(39, 33, 28, 0.96));
+      color: #f5ece2;
       border: none;
     }
 
-    .rows {
-      display: grid;
-      gap: 0;
+    .card-body {
+      padding: 24px 20px;
     }
 
-    .row {
-      display: grid;
-      grid-template-columns: 44px 1fr;
-      gap: 14px;
-      padding: 22px 20px;
-      border-top: 1px solid var(--line);
+    .card-title {
+      margin: 0 0 14px;
+      font-size: 1.32rem;
+      line-height: 1.34;
     }
 
-    .panel-dark .row {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .row:first-child {
-      border-top: none;
-    }
-
-    .row-index {
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display: grid;
-      place-items: center;
-      background: rgba(245, 123, 34, 0.12);
-      color: var(--orange-deep);
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-
-    .panel-dark .row-index {
-      color: #fff2e2;
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .row strong {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 1rem;
-    }
-
-    .row p {
+    .card-copy {
       margin: 0;
       color: inherit;
       opacity: 0.8;
-      font-size: 0.92rem;
+      font-size: 0.94rem;
     }
 
-    .scope-grid {
+    .list-rows {
+      display: grid;
+    }
+
+    .list-row {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      padding: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .card-dark .list-row {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .list-row:first-child {
+      border-top: none;
+    }
+
+    .list-index {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: rgba(196, 109, 40, 0.12);
+      color: var(--accent-deep);
+      font-weight: 800;
+      font-size: 0.86rem;
+    }
+
+    .card-dark .list-index {
+      color: #fff1e0;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .list-row strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.98rem;
+    }
+
+    .list-row p {
+      margin: 0;
+      color: inherit;
+      opacity: 0.78;
+      font-size: 0.91rem;
+    }
+
+    .scope-list {
       display: grid;
       gap: 12px;
     }
 
-    .scope-card {
+    .scope-item {
       padding: 20px;
       border-radius: var(--radius-lg);
-      background: var(--surface);
+      background: var(--surface-soft);
       border: 1px solid var(--line);
     }
 
-    .scope-card strong {
+    .scope-item strong {
       display: block;
       margin-bottom: 8px;
-      font-size: 1.02rem;
+      font-size: 1rem;
     }
 
-    .scope-card p {
+    .scope-item p {
       margin: 0;
       color: var(--ink-soft);
-      font-size: 0.92rem;
+      font-size: 0.91rem;
     }
 
     .rep-shell {
@@ -442,10 +458,10 @@
 
     .rep-photo {
       position: relative;
-      min-height: 420px;
+      min-height: 430px;
       overflow: hidden;
       border-radius: var(--radius-xl);
-      background: linear-gradient(180deg, #ede5dc 0%, #f5efe8 100%);
+      background: linear-gradient(180deg, #ece3d8 0%, #f4eee7 100%);
       box-shadow: var(--shadow);
     }
 
@@ -456,51 +472,34 @@
       object-position: center top;
     }
 
-    .rep-note {
+    .rep-caption {
       position: absolute;
       left: 14px;
       right: 14px;
       bottom: 14px;
-      padding: 16px 18px;
-      border-radius: 20px;
-      background: rgba(255, 253, 249, 0.9);
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 253, 249, 0.92);
       color: var(--ink);
-      box-shadow: 0 12px 22px rgba(37, 27, 19, 0.08);
     }
 
-    .rep-note strong {
+    .rep-caption strong {
       display: block;
       margin-bottom: 6px;
       font-size: 1rem;
     }
 
-    .rep-note p {
+    .rep-caption p {
       margin: 0;
       color: var(--ink-soft);
       font-size: 0.9rem;
     }
 
-    .rep-content {
-      padding: 22px 20px;
-    }
-
-    .rep-content h3 {
-      margin: 0 0 12px;
-      font-size: 1.5rem;
-      line-height: 1.3;
-      letter-spacing: -0.04em;
-    }
-
-    .rep-content > p {
-      margin: 0;
-      color: var(--ink-soft);
-    }
-
-    .rep-quote {
-      margin-top: 18px;
+    .quote-panel {
+      margin-top: 16px;
       padding: 18px;
-      border-radius: var(--radius-md);
-      background: rgba(245, 123, 34, 0.08);
+      border-left: 2px solid var(--accent);
+      background: rgba(196, 109, 40, 0.06);
       color: var(--ink);
       font-weight: 700;
     }
@@ -515,10 +514,9 @@
     }
 
     .apply-copy h3 {
-      margin: 0 0 12px;
-      font-size: 1.45rem;
-      line-height: 1.3;
-      letter-spacing: -0.04em;
+      margin: 0 0 14px;
+      font-size: 1.3rem;
+      line-height: 1.35;
     }
 
     .apply-copy p {
@@ -535,10 +533,10 @@
     }
 
     .apply-copy li {
-      position: relative;
       padding-left: 16px;
+      position: relative;
       color: var(--ink);
-      font-size: 0.92rem;
+      font-size: 0.91rem;
       font-weight: 600;
     }
 
@@ -547,14 +545,14 @@
       position: absolute;
       left: 0;
       top: 11px;
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      background: var(--orange);
+      background: var(--accent);
     }
 
     .form-card {
-      padding: 22px 20px;
+      padding: 24px 20px;
     }
 
     .form-grid {
@@ -571,7 +569,7 @@
 
     .field label,
     .field-full label {
-      font-size: 0.9rem;
+      font-size: 0.89rem;
       font-weight: 700;
     }
 
@@ -581,7 +579,7 @@
       width: 100%;
       min-height: 54px;
       padding: 14px 15px;
-      border-radius: 15px;
+      border-radius: 14px;
       border: 1px solid var(--line);
       background: rgba(255, 255, 255, 0.92);
       color: var(--ink);
@@ -589,7 +587,7 @@
     }
 
     .field-full textarea {
-      min-height: 150px;
+      min-height: 148px;
       resize: vertical;
     }
 
@@ -597,8 +595,8 @@
     .field select:focus,
     .field-full textarea:focus {
       outline: none;
-      border-color: rgba(245, 123, 34, 0.46);
-      box-shadow: 0 0 0 4px rgba(245, 123, 34, 0.1);
+      border-color: rgba(196, 109, 40, 0.48);
+      box-shadow: 0 0 0 4px rgba(196, 109, 40, 0.1);
     }
 
     .choice-group {
@@ -610,10 +608,10 @@
     .choice-group label {
       min-height: 46px;
       padding: 0 14px;
-      border-radius: 999px;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      border-radius: 999px;
       border: 1px solid var(--line);
       background: rgba(255, 255, 255, 0.9);
       cursor: pointer;
@@ -621,7 +619,7 @@
 
     .choice-group input,
     .agree-row input {
-      accent-color: var(--orange);
+      accent-color: var(--accent);
     }
 
     .policy-box {
@@ -630,7 +628,7 @@
       border: 1px solid var(--line);
       background: rgba(255, 255, 255, 0.9);
       color: var(--ink-soft);
-      font-size: 0.9rem;
+      font-size: 0.89rem;
     }
 
     .policy-box strong {
@@ -648,7 +646,7 @@
       border: 1px solid var(--line);
       background: rgba(255, 255, 255, 0.9);
       color: var(--ink-soft);
-      font-size: 0.9rem;
+      font-size: 0.89rem;
     }
 
     .agree-row input {
@@ -663,36 +661,36 @@
     .form-status {
       min-height: 22px;
       margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.9rem;
+      color: var(--ink-faint);
+      font-size: 0.89rem;
     }
 
     .form-status.error {
-      color: #b1291f;
+      color: #ad2a20;
     }
 
     .site-footer {
-      padding: 72px 0 54px;
+      padding: 76px 0 56px;
     }
 
     .footer-shell {
       padding: 24px 20px;
       border-radius: 24px;
       background: var(--dark);
-      color: rgba(247, 238, 228, 0.82);
+      color: rgba(247, 237, 227, 0.82);
     }
 
     .footer-shell strong {
       display: block;
       margin-bottom: 8px;
-      color: #fff6ec;
+      color: #fff7ee;
       font-size: 1.04rem;
     }
 
     .footer-grid {
       display: grid;
       gap: 8px;
-      color: rgba(247, 238, 228, 0.68);
+      color: rgba(247, 237, 227, 0.68);
       font-size: 0.9rem;
     }
 
@@ -710,44 +708,45 @@
 
     @media (min-width: 820px) {
       .wrap {
-        width: min(1180px, calc(100vw - 48px));
-      }
-
-      .header-inner {
-        min-height: 76px;
+        width: min(1160px, calc(100vw - 48px));
       }
 
       .header-phone {
         display: block;
       }
 
-      .hero-grid {
-        grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+      .hero-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(400px, 0.9fr);
       }
 
       .hero-copy {
-        padding: 42px 42px 42px 46px;
+        padding: 52px 44px;
+      }
+
+      .hero-copy h1 {
+        max-width: 9.5ch;
       }
 
       .hero-photo {
         min-height: 100%;
       }
 
-      .hero-actions .btn {
-        min-width: 168px;
+      .split-block {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: start;
       }
 
-      .scope-grid {
+      .scope-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
-      .scope-card:last-child:nth-child(5) {
+      .scope-item:last-child:nth-child(5) {
         grid-column: 2 / 3;
       }
 
       .rep-shell {
         grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.1fr);
-        align-items: stretch;
       }
 
       .rep-photo {
@@ -755,11 +754,12 @@
       }
 
       .apply-shell {
-        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+        grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
       }
 
       .apply-copy,
-      .form-card {
+      .form-card,
+      .card-body {
         padding: 30px;
       }
 
@@ -778,20 +778,16 @@
 
       .footer-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px 22px;
+        gap: 10px 24px;
       }
     }
 
     @media (min-width: 1100px) {
-      .hero-copy h1 {
-        max-width: 10ch;
-      }
-
-      .scope-grid {
+      .scope-list {
         grid-template-columns: repeat(5, minmax(0, 1fr));
       }
 
-      .scope-card:last-child:nth-child(5) {
+      .scope-item:last-child:nth-child(5) {
         grid-column: auto;
       }
     }
@@ -822,83 +818,98 @@
     <section class="hero">
       <div class="wrap">
         <div class="hero-shell">
-          <div class="hero-grid">
-            <div class="hero-copy">
-              <span class="eyebrow">소상공인 · 중소기업 정책자금 상담</span>
-              <h1>
-                지금 사업 상황에서
-                <br>
-                먼저 봐야 할 자금 방향을
-                <br>
-                함께 정리합니다
-              </h1>
-              <p>
-                에스(S)파트너스는 업종, 사업자 유형, 매출 구조, 사업 단계에 맞춰
-                먼저 검토해야 할 정책자금 방향을 분명하게 안내합니다.
-              </p>
-
-              <ul class="hero-points">
-                <li>업종별 진단을 바탕으로 상담 방향을 정리합니다</li>
-                <li>빠른 실무 대응으로 다음 단계를 분명하게 안내합니다</li>
-                <li>승인 경험을 토대로 현실적인 기준으로 상담합니다</li>
-              </ul>
-
-              <div class="hero-actions">
-                <a class="btn btn-primary" href="#apply">상담 신청하기</a>
-                <a class="btn btn-secondary" href="#way">상담 방식 보기</a>
+          <div class="hero-copy">
+            <span class="hero-kicker">S PARTNERS CONSULTING</span>
+            <h1 class="serif">
+              자금이 급한 순간일수록
+              <br>
+              먼저 필요한 것은
+              <br>
+              방향입니다
+            </h1>
+            <div class="hero-divider"></div>
+            <p>
+              에스(S)파트너스는 소상공인과 중소기업의 현재 사업 구조를 먼저 보고
+              지금 검토해야 할 정책자금의 순서를 정리합니다.
+            </p>
+            <div class="hero-summary">
+              <div>
+                <strong>업종별 진단</strong>
+                <span>사업 구조와 업종 특성을 먼저 확인합니다.</span>
               </div>
-
-              <div class="hero-note">
-                상담 신청 후 순차적으로 확인하며, 사업 상황과 정책 기준에 따라 안내 내용은 달라질 수 있습니다.
+              <div>
+                <strong>빠른 실무 대응</strong>
+                <span>무엇을 먼저 준비해야 하는지 분명하게 안내합니다.</span>
+              </div>
+              <div>
+                <strong>승인 경험 기반 상담</strong>
+                <span>현실적인 가능성과 보완 방향을 함께 봅니다.</span>
               </div>
             </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#apply">상담 신청하기</a>
+              <a class="btn btn-secondary" href="#direction">상담 방식 보기</a>
+            </div>
+          </div>
 
-            <div class="hero-photo">
-              <img src="대표자사진1.jpg" alt="에스파트너스 박세한 대표">
-              <div class="hero-caption">
-                <strong>박세한 대표</strong>
-                <span>소상공인 및 중소기업 정책자금 상담을 실무 중심으로 안내합니다.</span>
-              </div>
+          <div class="hero-photo">
+            <img src="대표자사진1.jpg" alt="에스파트너스 박세한 대표">
+            <div class="hero-quote">
+              <strong>박세한 대표</strong>
+              <span>소상공인 및 중소기업 정책자금 상담을 실무 중심으로 안내합니다.</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="way">
+    <section class="section" id="direction">
       <div class="wrap">
         <div class="section-head">
           <span>상담 방향</span>
-          <h2>목록을 나열하기보다, 지금 필요한 자금의 순서를 먼저 잡습니다</h2>
+          <h2 class="serif">무엇이 가능한지보다 지금 무엇부터 봐야 하는지 정리합니다</h2>
           <p>
-            정책자금 상담은 가능한 항목을 많이 보여주는 것보다
-            현재 사업 구조에서 어디부터 검토해야 하는지 분명하게 정리하는 것이 중요합니다.
+            정책자금 상담은 목록을 많이 아는 일보다
+            현재 상황에서 어느 방향이 먼저인지 분명하게 짚는 일에 가깝습니다.
           </p>
         </div>
 
-        <div class="panel panel-dark">
-          <div class="rows">
-            <article class="row">
-              <span class="row-index">01</span>
-              <div>
-                <strong>어디서부터 시작해야 할지 모호한 경우</strong>
-                <p>운전자금, 시설자금, 지원금이 섞여 보여도 지금 상황에 맞는 우선순위를 먼저 정해야 합니다.</p>
-              </div>
-            </article>
-            <article class="row">
-              <span class="row-index">02</span>
-              <div>
-                <strong>서류 준비보다 방향 판단이 먼저 필요한 경우</strong>
-                <p>처음부터 준비를 많이 하기보다 어떤 자금을 먼저 볼지 정하는 것이 훨씬 중요합니다.</p>
-              </div>
-            </article>
-            <article class="row">
-              <span class="row-index">03</span>
-              <div>
-                <strong>빠르게 자금 방향을 가려내야 하는 경우</strong>
-                <p>운영 상황이 급한 시점에는 가장 현실적인 자금 라인부터 먼저 검토하는 접근이 필요합니다.</p>
-              </div>
-            </article>
+        <div class="split-block">
+          <div class="editorial">
+            <p>
+              대표님들이 가장 많이 겪는 문제는 정보 부족 자체보다
+              <strong>어디서부터 시작해야 할지 모호한 상태</strong>입니다.
+            </p>
+            <p>
+              운전자금, 시설자금, 지원금, 보증연계가 한꺼번에 보이더라도
+              실제 상담에서는 현재 사업 구조와 자금 목적을 먼저 나누는 것이 우선입니다.
+            </p>
+          </div>
+
+          <div class="card card-dark">
+            <div class="list-rows">
+              <article class="list-row">
+                <span class="list-index">01</span>
+                <div>
+                  <strong>방향부터 정리해야 하는 이유</strong>
+                  <p>처음부터 서류를 많이 준비하기보다, 어떤 자금을 먼저 검토할지 정하는 것이 훨씬 중요합니다.</p>
+                </div>
+              </article>
+              <article class="list-row">
+                <span class="list-index">02</span>
+                <div>
+                  <strong>업종과 사업자 유형은 출발점입니다</strong>
+                  <p>소상공인인지 중소기업인지, 개인인지 법인인지에 따라 상담 흐름 자체가 달라집니다.</p>
+                </div>
+              </article>
+              <article class="list-row">
+                <span class="list-index">03</span>
+                <div>
+                  <strong>빠른 대응이 필요한 시점일수록 더 중요합니다</strong>
+                  <p>운영 상황이 급할수록 가장 현실적인 자금 라인부터 먼저 가려내야 시간을 줄일 수 있습니다.</p>
+                </div>
+              </article>
+            </div>
           </div>
         </div>
       </div>
@@ -908,31 +919,31 @@
       <div class="wrap">
         <div class="section-head">
           <span>지원 범위</span>
-          <h2>현재 상담 가능한 자금 범위</h2>
+          <h2 class="serif">현재 상담 가능한 주요 자금 범위</h2>
           <p>
-            사업 목적과 현재 상황에 따라 하나의 항목만 보지 않고
+            사업 목적과 현재 상황에 따라 한 가지 항목만 보지 않고
             여러 자금 방향을 함께 비교해 우선순위를 정합니다.
           </p>
         </div>
 
-        <div class="scope-grid">
-          <article class="scope-card">
+        <div class="scope-list">
+          <article class="scope-item">
             <strong>운전자금</strong>
-            <p>사업 운영 흐름을 유지하기 위해 필요한 자금 방향을 먼저 살펴봅니다.</p>
+            <p>사업 운영 흐름을 유지하기 위해 먼저 검토해야 할 방향을 정리합니다.</p>
           </article>
-          <article class="scope-card">
+          <article class="scope-item">
             <strong>시설자금</strong>
-            <p>시설 투자, 확장, 공간 관련 자금이 필요한 경우 맞는 방향을 검토합니다.</p>
+            <p>시설 투자나 확장 목적에 맞는 자금 접근 방향을 검토합니다.</p>
           </article>
-          <article class="scope-card">
+          <article class="scope-item">
             <strong>창업자금</strong>
-            <p>예비창업자 또는 초기 단계 사업자의 조건에 맞는 흐름을 함께 정리합니다.</p>
+            <p>예비창업자 또는 초기 단계 사업자의 상황에 맞춰 흐름을 정리합니다.</p>
           </article>
-          <article class="scope-card">
+          <article class="scope-item">
             <strong>보증연계</strong>
-            <p>보증을 통한 접근이 적합한지 사업 구조와 필요 목적에 맞춰 판단합니다.</p>
+            <p>보증을 통한 접근이 적합한지 사업 구조와 목적에 맞춰 판단합니다.</p>
           </article>
-          <article class="scope-card">
+          <article class="scope-item">
             <strong>정부지원금</strong>
             <p>현재 사업과 연결될 수 있는 지원사업과 지원금 방향까지 함께 안내합니다.</p>
           </article>
@@ -944,63 +955,65 @@
       <div class="wrap">
         <div class="section-head">
           <span>대표 소개</span>
-          <h2>대표가 직접 현재 상황에 맞는 상담 흐름을 함께 정리합니다</h2>
+          <h2 class="serif">대표가 직접 현재 상황에 맞는 상담 흐름을 함께 정리합니다</h2>
           <p>
             과장된 숫자보다 지금 사업 단계에서 먼저 봐야 할 기준과
-            실제 상담 흐름을 분명하게 설명하는 데 집중합니다.
+            실제 진행 순서를 분명하게 설명하는 데 집중합니다.
           </p>
         </div>
 
         <div class="rep-shell">
           <div class="rep-photo">
             <img src="대표자사진2.jpg" alt="에스파트너스 박세한 대표 프로필 사진">
-            <div class="rep-note">
+            <div class="rep-caption">
               <strong>박세한 대표</strong>
               <p>“항상 대표님들께 힘이 될 수 있는 S파트너스가 되겠습니다.”</p>
             </div>
           </div>
 
-          <div class="panel rep-content">
-            <h3>상담은 이런 순서로 진행됩니다</h3>
-            <p>
-              신청 내용을 바탕으로 사업자 유형, 업종, 연매출 구간, 필요한 자금 목적을 먼저 확인하고
-              그다음 적합한 방향을 순차적으로 안내합니다.
-            </p>
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title serif">상담은 이런 순서로 진행됩니다</h3>
+              <p class="card-copy">
+                신청 내용을 바탕으로 사업자 유형, 업종, 연매출 구간, 필요한 자금 목적을 먼저 확인하고
+                적합한 방향을 순차적으로 안내합니다.
+              </p>
 
-            <div class="rep-quote">
-              업종별 진단, 빠른 일처리, 승인 경험을 바탕으로
-              현재 상황에 맞는 방향을 현실적으로 정리합니다.
-            </div>
+              <div class="quote-panel">
+                업종별 진단, 빠른 실무 대응, 승인 경험을 바탕으로
+                현재 상황에 맞는 방향을 현실적으로 정리합니다.
+              </div>
 
-            <div class="rows" style="margin-top:18px;">
-              <article class="row">
-                <span class="row-index">1</span>
-                <div>
-                  <strong>상담 신청 접수</strong>
-                  <p>업체명, 연락처, 업종, 사업자 유형 등 기본 내용을 먼저 확인합니다.</p>
-                </div>
-              </article>
-              <article class="row">
-                <span class="row-index">2</span>
-                <div>
-                  <strong>사업 상황 1차 파악</strong>
-                  <p>소상공인인지 중소기업인지, 개인인지 법인인지 기준을 먼저 정리합니다.</p>
-                </div>
-              </article>
-              <article class="row">
-                <span class="row-index">3</span>
-                <div>
-                  <strong>적합한 자금 방향 안내</strong>
-                  <p>운전자금, 시설자금, 창업자금, 보증연계, 정부지원금 중 우선 검토 대상을 정합니다.</p>
-                </div>
-              </article>
-              <article class="row">
-                <span class="row-index">4</span>
-                <div>
-                  <strong>후속 절차 설명</strong>
-                  <p>준비 항목과 진행 포인트를 안내하고 실제 상담으로 이어갑니다.</p>
-                </div>
-              </article>
+              <div class="list-rows" style="margin-top:18px;">
+                <article class="list-row">
+                  <span class="list-index">1</span>
+                  <div>
+                    <strong>상담 신청 접수</strong>
+                    <p>업체명, 연락처, 업종, 사업자 유형 등 기본 내용을 먼저 확인합니다.</p>
+                  </div>
+                </article>
+                <article class="list-row">
+                  <span class="list-index">2</span>
+                  <div>
+                    <strong>사업 상황 1차 파악</strong>
+                    <p>소상공인인지 중소기업인지, 개인인지 법인인지 기준을 먼저 정리합니다.</p>
+                  </div>
+                </article>
+                <article class="list-row">
+                  <span class="list-index">3</span>
+                  <div>
+                    <strong>적합한 자금 방향 안내</strong>
+                    <p>운전자금, 시설자금, 창업자금, 보증연계, 정부지원금 중 우선 검토 대상을 정합니다.</p>
+                  </div>
+                </article>
+                <article class="list-row">
+                  <span class="list-index">4</span>
+                  <div>
+                    <strong>후속 절차 설명</strong>
+                    <p>준비 항목과 진행 포인트를 안내하고 실제 상담으로 이어갑니다.</p>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -1011,7 +1024,7 @@
       <div class="wrap">
         <div class="section-head">
           <span>상담 신청</span>
-          <h2>상담신청을 남겨주시면 순차적으로 확인 후 연락드리겠습니다</h2>
+          <h2 class="serif">상담신청을 남겨주시면 순차적으로 확인 후 연락드리겠습니다</h2>
           <p>
             현재 매출 구간, 업종, 사업자 유형, 자금 목적 정도만 남겨주셔도
             상담 방향을 잡는 데 충분합니다.
@@ -1019,20 +1032,22 @@
         </div>
 
         <div class="apply-shell">
-          <aside class="panel apply-copy">
-            <h3>상담 전에 이 정도만 정리해 주세요</h3>
-            <p>
-              모든 내용을 자세히 적지 않으셔도 됩니다.
-              기본 정보만 있어도 현재 상황에 맞는 검토 방향을 정리할 수 있습니다.
-            </p>
-            <ul>
-              <li>개인사업자인지 법인사업자인지</li>
-              <li>현재 업종과 대략적인 매출 구간</li>
-              <li>운영 안정화인지 확장 목적 자금인지</li>
-            </ul>
+          <aside class="card">
+            <div class="apply-copy">
+              <h3 class="serif">상담 전에 이 정도만 정리해 주세요</h3>
+              <p>
+                모든 내용을 자세히 적지 않으셔도 됩니다.
+                기본 정보만 있어도 현재 상황에 맞는 검토 방향을 정리할 수 있습니다.
+              </p>
+              <ul>
+                <li>개인사업자인지 법인사업자인지</li>
+                <li>현재 업종과 대략적인 매출 구간</li>
+                <li>운영 안정화인지 확장 목적 자금인지</li>
+              </ul>
+            </div>
           </aside>
 
-          <div class="panel form-card">
+          <div class="card form-card">
             <form
               id="lead-form"
               action="https://formsubmit.co/pure46q4@naver.com"
